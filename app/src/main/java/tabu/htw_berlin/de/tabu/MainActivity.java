@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 starteRegelnActivity();
                 break;
             case R.id.btn_beenden:
+                System.exit(0);
                 break;
         }
     }

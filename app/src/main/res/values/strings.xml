@@ -3,4 +3,17 @@
     <string name="str_starte_spiel">Starte Spiel</string>
     <string name="str_regeln">Regeln</string>
     <string name="str_beenden">Beenden</string>
+
+    <string name="txt_regeln">
+        Ziel des Spiels:\n\n
+        Ziel ist es, als Team so viele Begriffe wie möglich zu erraten.\n\n\n
+        Spielablauf:\n\n
+        Ein Spieler aus dem Team muss den anderen Teammitgliedern die Begriffe erklären ohne die
+        "Tabuwörter" zu benutzen. Das Team hat 3 Minuten Zeit so viele Begriffe wie möglich zu
+        erraten.\n
+        Während des Spiels kontrolliert ein Spieler des gegnerischen Teams, ob der Spieler auch
+        wirklich keine "Tabuwörter" benutzt. Erwischt dieser einen solchen Regelverstoß, kann er
+        buzzern. Dann muss der Spieler einen neuen Begriff erraten.\n
+        Der Buzzer kann im Hauptmenü aufgerufen werden.\n
+        Das Team mit den meisten Punkten am Ende gewinnt.</string>
 </resources>
