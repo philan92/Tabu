@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_starte_spiel:
+                starteCountdownActivity();
                 break;
             case R.id.btn_regeln:
                 starteRegelnActivity();
@@ -43,6 +44,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void starteRegelnActivity() {
         Intent intent = new Intent(this, RegelnActivity.class);
+        startActivity(intent);
+    }
+
+    private void starteCountdownActivity() {
+        Intent intent = new Intent(this, CountdownActivity.class);
         startActivity(intent);
     }
 }

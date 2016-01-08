@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Tabu</string>
     <string name="str_starte_spiel">Starte Spiel</string>
-    <string name="str_regeln">Regeln</string>
+    <string name="str_regeln">Spielregeln</string>
     <string name="str_beenden">Beenden</string>
 
     <string name="txt_regeln">
@@ -16,4 +16,5 @@
         buzzern. Dann muss der Spieler einen neuen Begriff erraten.\n
         Der Buzzer kann im Hauptmenü aufgerufen werden.\n
         Das Team mit den meisten Punkten am Ende gewinnt.</string>
+    <string name="str_bereitmachen">Mach Dich bereit!</string>
 </resources>

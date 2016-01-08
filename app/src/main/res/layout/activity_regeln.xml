@@ -22,7 +22,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/app_name"
+        android:text="@string/str_regeln"
         android:id="@+id/tv_titel_regeln"
         android:textSize="50sp"
         android:layout_alignParentTop="true"
