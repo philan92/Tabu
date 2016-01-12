@@ -7,7 +7,6 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -24,6 +23,12 @@ import java.util.Random;
 public class SpielActivity extends AppCompatActivity implements View.OnClickListener{
 
     final int ANZAHL_KARTEN = 64; //Anzahl der Zeilen in tabu.txt
+
+    public static final long SLEEPTIME = 10;
+    boolean isRunning;
+    Thread refreshThread;
+    double time;
+
     List gezogeneKarte; // enthaelt die Begriffe der aktuell gezogenen Karte
     List bereitsGezogen; // enthaelt die Zeilennummern der bereits gezogenen Karten
     int punktzahl;
@@ -37,6 +42,7 @@ public class SpielActivity extends AppCompatActivity implements View.OnClickList
     TextView tvBegriff4;
     TextView tvBegriff5;
     TextView tvBegriff6;
+    TextView tvVerbleibendeZeit;
 
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,13 +58,20 @@ public class SpielActivity extends AppCompatActivity implements View.OnClickList
         tvBegriff4 = (TextView) findViewById(R.id.tv_begriff4);
         tvBegriff5 = (TextView) findViewById(R.id.tv_begriff5);
         tvBegriff6 = (TextView) findViewById(R.id.tv_begriff6);
-
+        tvVerbleibendeZeit = (TextView) findViewById(R.id.tv_verbleibendeZeit);
 
         btnRichtig.setOnClickListener(this);
         btnNaechsteKarte.setOnClickListener(this);
 
+
+
+        time = 05.00; // Zeit fuer eine Runde
+
         bereitsGezogen = new ArrayList<>();
         punktzahl = 0;
+
+        isRunning = true;
+        initThread();
 
         zieheKarte(); // Startkarte ziehen
     }
@@ -127,5 +140,36 @@ public class SpielActivity extends AppCompatActivity implements View.OnClickList
         tvBegriff4.setText((String)gezogeneKarte.get(3));
         tvBegriff5.setText((String)gezogeneKarte.get(4));
         tvBegriff6.setText((String)gezogeneKarte.get(5));
+    }
+
+    // Initialisiert und startet den Timer
+    private void initThread() {
+        refreshThread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                while (isRunning) {
+                    time -= 0.01;
+
+                    try {
+                        Thread.sleep(SLEEPTIME);
+                    } catch (InterruptedException ie) {
+                        ie.printStackTrace();
+                    }
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            tvVerbleibendeZeit.setText(String.format("%.2f", time));
+
+                            // pruefe, ob Zeit abgelaufen ist
+                            if (time <= 0.00) {
+                                isRunning = false;
+                                tvVerbleibendeZeit.setText("0,00"); // TODO ErgebnisActivity starten
+                            }
+                        }
+                    });
+                }
+            }
+        });
+        refreshThread.start();
     }
 }
