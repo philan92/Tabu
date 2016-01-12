@@ -17,4 +17,8 @@
         Der Buzzer kann im Hauptmenü aufgerufen werden.\n
         Das Team mit den meisten Punkten am Ende gewinnt.</string>
     <string name="str_bereitmachen">Mach Dich bereit!</string>
+    <string name="str_erreichtePunkte">Punkte: 0</string>
+    <string name="str_richtig">Richtig</string>
+    <string name="str_naechste_karte">nächste Karte</string>
+    <string name="str_platzhalter">Begriff</string>
 </resources>

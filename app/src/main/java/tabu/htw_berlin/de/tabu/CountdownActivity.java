@@ -1,5 +1,6 @@
 package tabu.htw_berlin.de.tabu;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
@@ -29,9 +30,16 @@ public class CountdownActivity extends AppCompatActivity {
                 tvCountdown.setText(String.valueOf(millisUntilFinished / 1000));
             }
 
+            // Startet die SpielActivity nach Ablauf des Countdowns
             public void onFinish() {
-                tvCountdown.setText(String.valueOf(0)); //TODO SpielActivity aufrufen
+                tvCountdown.setText(String.valueOf(0));
+                starteSpielActivity();
             }
         }.start();
+    }
+
+    private void starteSpielActivity() {
+        Intent intent = new Intent(this, SpielActivity.class);
+        startActivity(intent);
     }
 }

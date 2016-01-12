@@ -62,23 +62,3 @@ nachtaktiv,Tag,leben,dunkel,Maulwurf,Fledermaus
 witzig,lustig,Scherz,Komiker,lachen,spritzig
 Unter Uns,Fernsehen,Serie,RTL,Seifenoper,taeglich
 Ben Stiller,Schauspieler,Film,Komoedie,New York,Robert De Niro
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

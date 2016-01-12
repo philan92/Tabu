@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="03:00"
+        android:id="@+id/tv_verbleibendeZeit"
+        android:textSize="50sp"
+        android:layout_below="@+id/progressBar"
+        android:layout_centerHorizontal="true" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_richtig"
+        android:id="@+id/btn_richtig"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/tv_verbleibendeZeit"
+        android:layout_toEndOf="@+id/tv_verbleibendeZeit"
+        android:layout_alignTop="@+id/btn_naechsteKarte"
+        android:background="@android:color/holo_green_dark" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_naechste_karte"
+        android:id="@+id/btn_naechsteKarte"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/tv_verbleibendeZeit"
+        android:layout_toStartOf="@+id/tv_verbleibendeZeit"
+        android:background="@android:color/holo_red_dark" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/str_erreichtePunkte"
+        android:id="@+id/tv_punkte"
+        android:layout_above="@+id/btn_richtig"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_begriff1"
+        android:background="@android:color/holo_blue_dark"
+        android:textSize="40sp"
+        android:text="@string/str_platzhalter"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/tv_verbleibendeZeit"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:gravity="center" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/str_platzhalter"
+        android:id="@+id/tv_begriff2"
+        android:background="@android:color/background_light"
+        android:textSize="40sp"
+        android:textColor="@android:color/tertiary_text_dark"
+        android:layout_below="@+id/tv_begriff1"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:padding="5dp"
+        android:gravity="center"/>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/str_platzhalter"
+        android:id="@+id/tv_begriff3"
+        android:background="@android:color/background_light"
+        android:textSize="40sp"
+        android:textColor="@android:color/tertiary_text_dark"
+        android:layout_below="@+id/tv_begriff2"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:padding="5dp"
+        android:gravity="center"/>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/str_platzhalter"
+        android:id="@+id/tv_begriff4"
+        android:background="@android:color/background_light"
+        android:textSize="40sp"
+        android:textColor="@android:color/tertiary_text_dark"
+        android:layout_below="@+id/tv_begriff3"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:padding="5dp"
+        android:gravity="center"/>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/str_platzhalter"
+        android:id="@+id/tv_begriff5"
+        android:background="@android:color/background_light"
+        android:textSize="40sp"
+        android:textColor="@android:color/tertiary_text_dark"
+        android:layout_below="@+id/tv_begriff4"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:padding="5dp"
+        android:gravity="center"/>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/str_platzhalter"
+        android:id="@+id/tv_begriff6"
+        android:background="@android:color/background_light"
+        android:textSize="40sp"
+        android:textColor="@android:color/tertiary_text_dark"
+        android:layout_below="@+id/tv_begriff5"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:padding="5dp"
+        android:gravity="center"/>
+
+
+
+</RelativeLayout>

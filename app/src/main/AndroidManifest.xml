@@ -9,7 +9,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">   <!--Theme festlegen-->
 
-        <activity android:name=".MainActivity">
+
+
+        <activity android:name=".MainActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -17,14 +21,27 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".RegelnActivity" >
+        <activity android:name=".RegelnActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
             <!--Default Intent Filter-->
             <intent-filter>
                 <action android:name="android.intent.action.DEFAULT" />
             </intent-filter>
         </activity>
 
-        <activity android:name=".CountdownActivity" >
+        <activity android:name=".CountdownActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
+            <!--Default Intent Filter-->
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".SpielActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
             <!--Default Intent Filter-->
             <intent-filter>
                 <action android:name="android.intent.action.DEFAULT" />
