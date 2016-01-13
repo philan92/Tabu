@@ -27,8 +27,10 @@ import java.util.Random;
 public class SpielActivity extends AppCompatActivity implements View.OnClickListener{
 
     final int ANZAHL_KARTEN = 64; //Anzahl der Zeilen in tabu.txt
-
     public static final long SLEEPTIME = 10;
+
+    Statistik statistik;
+
     boolean isRunning;
     Thread refreshThread;
     boolean gestartet;
@@ -70,6 +72,8 @@ public class SpielActivity extends AppCompatActivity implements View.OnClickList
 
         btnRichtig.setOnClickListener(this);
         btnNaechsteKarte.setOnClickListener(this);
+
+        statistik = new Statistik();
 
         gestartet = false;
 
@@ -134,6 +138,8 @@ public class SpielActivity extends AppCompatActivity implements View.OnClickList
             case R.id.btn_richtig:
                 punktzahl++;
                 tvPunkte.setText("Punkte: " + punktzahl);
+                statistik.addKorrektenBegriff((String) gezogeneKarte.get(0));
+                statistik.erhoehePunktzahl();
                 zieheKarte();
                 break;
             case R.id.btn_naechsteKarte:
@@ -148,12 +154,14 @@ public class SpielActivity extends AppCompatActivity implements View.OnClickList
 
     // Zeigt die gezogenen Begriffe auf dem Display an
     private void zeigeKarte() {
-        tvBegriff1.setText((String)gezogeneKarte.get(0));
+        tvBegriff1.setText(((String)gezogeneKarte.get(0)).toUpperCase());
         tvBegriff2.setText((String)gezogeneKarte.get(1));
         tvBegriff3.setText((String)gezogeneKarte.get(2));
         tvBegriff4.setText((String)gezogeneKarte.get(3));
         tvBegriff5.setText((String)gezogeneKarte.get(4));
         tvBegriff6.setText((String) gezogeneKarte.get(5));
+
+        statistik.addGezogenenBegriff((String)gezogeneKarte.get(0));
     }
 
     // Initialisiert und startet den Timer
@@ -199,6 +207,9 @@ public class SpielActivity extends AppCompatActivity implements View.OnClickList
 
     private void starteErgebnisActivity() {
         Intent intent = new Intent(this, ErgebnisActivity.class);
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("statistik", statistik);
+        intent.putExtras(bundle);
         startActivity(intent);
     }
 }
