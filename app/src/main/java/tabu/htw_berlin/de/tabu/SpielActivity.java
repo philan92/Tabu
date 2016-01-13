@@ -1,10 +1,14 @@
 package tabu.htw_berlin.de.tabu;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -27,7 +31,9 @@ public class SpielActivity extends AppCompatActivity implements View.OnClickList
     public static final long SLEEPTIME = 10;
     boolean isRunning;
     Thread refreshThread;
+    boolean gestartet;
     double time;
+    int startTime; // wird als Referenzgroesse fuer Progbar benutzt
 
     List gezogeneKarte; // enthaelt die Begriffe der aktuell gezogenen Karte
     List bereitsGezogen; // enthaelt die Zeilennummern der bereits gezogenen Karten
@@ -43,6 +49,7 @@ public class SpielActivity extends AppCompatActivity implements View.OnClickList
     TextView tvBegriff5;
     TextView tvBegriff6;
     TextView tvVerbleibendeZeit;
+    ProgressBar progBar;
 
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,13 +66,17 @@ public class SpielActivity extends AppCompatActivity implements View.OnClickList
         tvBegriff5 = (TextView) findViewById(R.id.tv_begriff5);
         tvBegriff6 = (TextView) findViewById(R.id.tv_begriff6);
         tvVerbleibendeZeit = (TextView) findViewById(R.id.tv_verbleibendeZeit);
+        progBar = (ProgressBar) findViewById(R.id.progressBar);
 
         btnRichtig.setOnClickListener(this);
         btnNaechsteKarte.setOnClickListener(this);
 
+        gestartet = false;
 
+        time = 60.00; // Zeit fuer eine Runde
 
-        time = 05.00; // Zeit fuer eine Runde
+        startTime = (int)time;
+        progBar.setMax(startTime);
 
         bereitsGezogen = new ArrayList<>();
         punktzahl = 0;
@@ -127,10 +138,13 @@ public class SpielActivity extends AppCompatActivity implements View.OnClickList
                 break;
             case R.id.btn_naechsteKarte:
                 zieheKarte();
-                // TODO Zeitstrafe
+                time -= 5.00; // 5 Strafsekunden
+                Toast.makeText(SpielActivity.this, R.string.str_strafe, Toast.LENGTH_SHORT).show();
                 break;
         }
     }
+
+
 
     // Zeigt die gezogenen Begriffe auf dem Display an
     private void zeigeKarte() {
@@ -139,7 +153,7 @@ public class SpielActivity extends AppCompatActivity implements View.OnClickList
         tvBegriff3.setText((String)gezogeneKarte.get(2));
         tvBegriff4.setText((String)gezogeneKarte.get(3));
         tvBegriff5.setText((String)gezogeneKarte.get(4));
-        tvBegriff6.setText((String)gezogeneKarte.get(5));
+        tvBegriff6.setText((String) gezogeneKarte.get(5));
     }
 
     // Initialisiert und startet den Timer
@@ -160,16 +174,31 @@ public class SpielActivity extends AppCompatActivity implements View.OnClickList
                         public void run() {
                             tvVerbleibendeZeit.setText(String.format("%.2f", time));
 
+                            progBar.setProgress((int) Math.abs(time - startTime));
+
                             // pruefe, ob Zeit abgelaufen ist
-                            if (time <= 0.00) {
+                            if (time <= 0) {
                                 isRunning = false;
-                                tvVerbleibendeZeit.setText("0,00"); // TODO ErgebnisActivity starten
+                                tvVerbleibendeZeit.setText("0,00");
+
+                                // startet die ErgebnisActivity genau einmal
+                                if (!gestartet){
+                                    gestartet = true;
+                                    starteErgebnisActivity();
+                                }
+
                             }
                         }
                     });
+
                 }
             }
         });
         refreshThread.start();
+    }
+
+    private void starteErgebnisActivity() {
+        Intent intent = new Intent(this, ErgebnisActivity.class);
+        startActivity(intent);
     }
 }

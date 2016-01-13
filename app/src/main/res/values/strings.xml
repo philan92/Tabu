@@ -21,4 +21,10 @@
     <string name="str_richtig">Richtig</string>
     <string name="str_naechste_karte">nächste Karte</string>
     <string name="str_platzhalter">Begriff</string>
+    <string name="str_strafe">5 sek Strafe</string>
+    <string name="str_spiel_vorbei">Spiel vorbei</string>
+    <string name="str_erreichte_punkte">erreichte Punkte:</string>
+    <string name="str_platzhalter_punkte">0</string>
+    <string name="str_gezogene_karten">gezogene Karten:</string>
+    <string name="str_hauptmenue">Hauptmenü</string>
 </resources>
