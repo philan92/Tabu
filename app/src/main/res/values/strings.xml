@@ -27,4 +27,5 @@
     <string name="str_platzhalter_punkte">0</string>
     <string name="str_gezogene_karten">gezogene Karten:</string>
     <string name="str_hauptmenue">Hauptmenü</string>
+    <string name="str_platzhalter_zeit">0,00</string>
 </resources>

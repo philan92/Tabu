@@ -3,7 +3,6 @@ package tabu.htw_berlin.de.tabu;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
@@ -37,8 +36,8 @@ public class SpielActivity extends AppCompatActivity implements View.OnClickList
     double time;
     int startTime; // wird als Referenzgroesse fuer Progbar benutzt
 
-    List gezogeneKarte; // enthaelt die Begriffe der aktuell gezogenen Karte
-    List bereitsGezogen; // enthaelt die Zeilennummern der bereits gezogenen Karten
+    List<String> gezogeneKarte; // enthaelt die Begriffe der aktuell gezogenen Karte
+    List<Integer> bereitsGezogen; // enthaelt die Zeilennummern der bereits gezogenen Karten
     int punktzahl;
 
     TextView tvPunkte;
@@ -137,8 +136,8 @@ public class SpielActivity extends AppCompatActivity implements View.OnClickList
         switch (v.getId()) {
             case R.id.btn_richtig:
                 punktzahl++;
-                tvPunkte.setText("Punkte: " + punktzahl);
-                statistik.addKorrektenBegriff((String) gezogeneKarte.get(0));
+                tvPunkte.setText(String.format("Punkte: %d", punktzahl));
+                statistik.addKorrektenBegriff(gezogeneKarte.get(0));
                 statistik.erhoehePunktzahl();
                 zieheKarte();
                 break;
@@ -154,14 +153,14 @@ public class SpielActivity extends AppCompatActivity implements View.OnClickList
 
     // Zeigt die gezogenen Begriffe auf dem Display an
     private void zeigeKarte() {
-        tvBegriff1.setText(((String)gezogeneKarte.get(0)).toUpperCase());
-        tvBegriff2.setText((String)gezogeneKarte.get(1));
-        tvBegriff3.setText((String)gezogeneKarte.get(2));
-        tvBegriff4.setText((String)gezogeneKarte.get(3));
-        tvBegriff5.setText((String)gezogeneKarte.get(4));
-        tvBegriff6.setText((String) gezogeneKarte.get(5));
+        tvBegriff1.setText((gezogeneKarte.get(0)).toUpperCase());
+        tvBegriff2.setText(gezogeneKarte.get(1));
+        tvBegriff3.setText(gezogeneKarte.get(2));
+        tvBegriff4.setText(gezogeneKarte.get(3));
+        tvBegriff5.setText(gezogeneKarte.get(4));
+        tvBegriff6.setText(gezogeneKarte.get(5));
 
-        statistik.addGezogenenBegriff((String)gezogeneKarte.get(0));
+        statistik.addGezogenenBegriff(gezogeneKarte.get(0));
     }
 
     // Initialisiert und startet den Timer
@@ -187,7 +186,7 @@ public class SpielActivity extends AppCompatActivity implements View.OnClickList
                             // pruefe, ob Zeit abgelaufen ist
                             if (time <= 0) {
                                 isRunning = false;
-                                tvVerbleibendeZeit.setText("0,00");
+                                tvVerbleibendeZeit.setText(R.string.str_platzhalter_zeit);
 
                                 // startet die ErgebnisActivity genau einmal
                                 if (!gestartet){

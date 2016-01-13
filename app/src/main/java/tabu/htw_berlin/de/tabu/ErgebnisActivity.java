@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
@@ -12,6 +11,8 @@ import android.widget.TextView;
 
 /**
  * Created by philipp on 13.01.16.
+ * In dieser Activity wird die Auswertung der Spielrunde gezeigt. Es werden die erreichten Punkte
+ * sowie die gezogenen Karten gezeigt.
  */
 public class ErgebnisActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -42,7 +43,7 @@ public class ErgebnisActivity extends AppCompatActivity implements View.OnClickL
 
         btnHauptmenue.setOnClickListener(this);
 
-        tvPunktzahl.setText(Integer.toString(statistik.getPunktzahl()));
+        tvPunktzahl.setText(String.format("%d",statistik.getPunktzahl()));
 
 
         fuelleListe();
