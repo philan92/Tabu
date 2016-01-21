@@ -1,64 +1,64 @@
-Flocke,Schnee,Kristall,kalt,weiss,Eisbaer
+Flocke,Schnee,Kristall,kalt,weiß,Eisbär
 Verbotene Liebe,Serie,Fernsehen,Seifenoper,täglich,Das Erste
-Harrods,einkaufen,Waren,gross,London,England
+Harrods,einkaufen,Waren,groß,London,England
 Netzwerk,Computer,Internet,verbinden,Kabel,System
 Thriller,Roman,Film,spannend,Story,Michael Jackson
-Maggi,Kraut,Gewuerz,fluessig,Flasche,braun
+Maggi,Kraut,Gewürz,flüssig,Flasche,braun
 Forum,Platz,Internet,Fragen,Diskussion,Romanum
-Raubtier,jagen,Fleisch,Zahn,beissen,Loewe
+Raubtier,jagen,Fleisch,Zahn,beißen,Löwe
 Kate Winslet,Schauspielerin,England,Kino,Titanic,Leonardo DiCabrio
-Bastille,Paris,Gefaengnis,Festung,Revolution,Sturm
+Bastille,Paris,Gefängnis,Festung,Revolution,Sturm
 Payback,einkaufen,Geld,Karte,bezahlen,Punkte
 Cate Blanchett,Film,Kino,Schauspielerin,Australien,Elizabeth
 Lampenschirm,Licht,Tisch,Birne,hell,Schutz
-Flaeche,Boden,Land,Meter,Hektar,wohnen
+Fläche,Boden,Land,Meter,Hektar,wohnen
 Politik,Gesellschaft,Partei,Berlin,Regeln,herrschen
 Tabelle,Liste,Feld,Spalte,Zeile,Excel
-Haribo,suess,naschen,Baer,Frucht,Lakritze
+Haribo,süß,naschen,Bär,Frucht,Lakritze
 Brillenetui,Dose,Schachtel,aufbewahren,sicher,schmal
-Seeraeuber,Pirat,Freibeuter,Schiff,Totenkopf,entern
+Seeräuber,Pirat,Freibeuter,Schiff,Totenkopf,entern
 Silhouette,Umriss,Form,Schatten,Skyline,Haus
-Schwarzes Meer,Osten,Europa,Asien,Wasser,weiss
+Schwarzes Meer,Osten,Europa,Asien,Wasser,weiß
 Tier,leben,Kreatur,Haus,allgemein,Wesen
-Kapsel,Behaelter,klein,Tablette,Weltraum,Gelenk
+Kapsel,Behälter,klein,Tablette,Weltraum,Gelenk
 Leserbrief,Zeitung,Wort,schreiben,Meinung,Reaktion
-Keinohrhasen,Komoedie,Film,Til Schweiger,hoeren,Kaninchen
+Keinohrhasen,Komödie,Film,Til Schweiger,hören,Kaninchen
 Installation,Technik,anbringen,Software,einrichten,Kunst
-Torschuetze,Fussball,Netz,treffen,gewinnen,Gegner
-Nebenjob,arbeiten,zusaetzlich,Geld,verdienen,Stunden
+Torschütze,Fußball,Netz,treffen,gewinnen,Gegner
+Nebenjob,arbeiten,zusätzlich,Geld,verdienen,Stunden
 Ausbildung,lernen,Lehre,weiter,Schule,Studium
 Louvre,Paris,Frankreich,Museum,Palast,Mona Lisa
-Headset,hoeren,Kopf,sprechen,Mikrofon,Telefon
-Gesundheit,krank,Koerper,pflegen,Arzt,niesen
+Headset,hören,Kopf,sprechen,Mikrofon,Telefon
+Gesundheit,krank,Körper,pflegen,Arzt,niesen
 Barack Obama,USA,Präsident,jung,Afrika,Clinton
 Ben Affleck,Schauspieler,Film,Hollywood,Oscar,Pearl Harbor
 Kurve,Bogen,Strasse,Stadion,Frau,rund
-Telefonnummer,Zahl,anrufen,Handy,waehlen,speichern
+Telefonnummer,Zahl,anrufen,Handy,wählen,speichern
 Gleichschritt,laufen,gehen,marschieren,Zeit,Soldat
 Newsletter,Website,Internet,Nachrichten,Verteiler,E-Mail
-Wartburg,Eisenach,Thueringen,Berg,Luther,Goethe
-Salat,essen,gesund,roh,gruen,Dressing
+Wartburg,Eisenach,Thüringen,Berg,Luther,Goethe
+Salat,essen,gesund,roh,grün,Dressing
 Ozeandampfer,Schiff,Atlantik,Meer,Riese,Amerika
 Programm,Fernsehen,Radio,Sender,Computer,Heft
-Sprechen,reden,Mund,Zunge,Wort,Geraeusch
+Sprechen,reden,Mund,Zunge,Wort,Geräusch
 Gepard,Tier,wild,Katze,Afrika,schnell
-Hass,Wut,Abneigung,Zorn,Liebe,Gefuehl
-Falschspieler,Karten,betruegen,luegen,Ass,gewinnen
+Hass,Wut,Abneigung,Zorn,Liebe,Gefühl
+Falschspieler,Karten,betrügen,lügen,Ass,gewinnen
 Zuckerbrot,Belohnung,brav,Butter,Salz,Peitsche
 Festplatte,Computer,Speicher,Daten,innen,Megabyte
 Tesafilm,Band,kleben,Papier,Rolle,durchsichtig
-Vortrag,Rede,halten,Universitaet,Zuhoerer,lernen
+Vortrag,Rede,halten,Universität,Zuhörer,lernen
 Sonderausstattung,Extra,Auto,Klimaanlage,teuer,bestellen
 High School Musical,Film,Disney,Amerika,Karaoke,Lied
-schoen,haesslich,aussehen,Model,Frau,Helena
-Eigentum,Besitz,Wohnung,Haus,Geld,gehoeren
-Glueckwunsch,Geburtstag,Jubilaeum,Ereignis,gut,herzlich
-Abwehrkraefte,Vitamine,Obst,Winter,gesund,krank
-Weisswein,trinken,rot,Traube,Riesling,trocken
+schön,hässlich,aussehen,Model,Frau,Helena
+Eigentum,Besitz,Wohnung,Haus,Geld,gehören
+Glückwunsch,Geburtstag,Jubiläum,Ereignis,gut,herzlich
+Abwehrkräfte,Vitamine,Obst,Winter,gesund,krank
+Weißwein,trinken,rot,Traube,Riesling,trocken
 Disney,Walt,Maus,Land,Zeichentrick,Comic
 Canal Grande,Italien,Venedig,Wasser,Lagune,Gondel
 Mobil,bewegen,unterwegs,mitnehmen,mitnehmen,Handy,Telefon
 nachtaktiv,Tag,leben,dunkel,Maulwurf,Fledermaus
 witzig,lustig,Scherz,Komiker,lachen,spritzig
-Unter Uns,Fernsehen,Serie,RTL,Seifenoper,taeglich
-Ben Stiller,Schauspieler,Film,Komoedie,New York,Robert De Niro
+Unter Uns,Fernsehen,Serie,RTL,Seifenoper,täglich
+Ben Stiller,Schauspieler,Film,Komödie,New York,Robert De Niro

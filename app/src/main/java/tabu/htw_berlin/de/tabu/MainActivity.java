@@ -11,8 +11,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button btnStarteSpiel;
     Button btnRegeln;
     Button btnBeenden;
-
-
+    
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

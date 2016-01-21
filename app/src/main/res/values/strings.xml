@@ -9,7 +9,7 @@
         Ziel ist es, als Team so viele Begriffe wie möglich zu erraten.\n\n\n
         Spielablauf:\n\n
         Ein Spieler aus dem Team muss den anderen Teammitgliedern die Begriffe erklären ohne die
-        "Tabuwörter" zu benutzen. Das Team hat 3 Minuten Zeit so viele Begriffe wie möglich zu
+        "Tabuwörter" zu benutzen. Das Team hat eine Minute Zeit so viele Begriffe wie möglich zu
         erraten.\n
         Während des Spiels kontrolliert ein Spieler des gegnerischen Teams, ob der Spieler auch
         wirklich keine "Tabuwörter" benutzt. Erwischt dieser einen solchen Regelverstoß, kann er
@@ -21,7 +21,7 @@
     <string name="str_richtig">Richtig</string>
     <string name="str_naechste_karte">nächste Karte</string>
     <string name="str_platzhalter">Begriff</string>
-    <string name="str_strafe">5 sek Strafe</string>
+    <string name="str_strafe">5 Sek Strafe</string>
     <string name="str_spiel_vorbei">Spiel vorbei</string>
     <string name="str_erreichte_punkte">erreichte Punkte:</string>
     <string name="str_platzhalter_punkte">0</string>

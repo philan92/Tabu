@@ -179,7 +179,7 @@ public class SpielActivity extends AppCompatActivity implements View.OnClickList
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            tvVerbleibendeZeit.setText(String.format("%.2f", time));
+                            tvVerbleibendeZeit.setText(String.format("%.2f", time)); // schreibt verbleibene Zeit
 
                             progBar.setProgress((int) Math.abs(time - startTime));
 
